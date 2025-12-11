@@ -1,0 +1,113 @@
+/* 1. Reset and Body Styling: This centers the calculator on the screen */
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center; /* Horizontally center */
+  align-items: center; /* Vertically center */
+  min-height: 100vh; /* Full viewport height */
+  background-color: #f0f2f5; /* Light gray background for the page */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* 2. The Calculator Body */
+.container {
+  width: 350px; /* FIX: Limit the width so it looks like a phone/calculator */
+  background-color: white;
+  padding: 20px; /* Reduced from 90px to save space */
+  border-radius: 20px;
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1); /* Adds a cool 3D shadow */
+  text-align: center;
+}
+
+/* 3. The Screen/Display Area */
+h2 {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 5px;
+  text-align: right; /* Labels usually on right */
+}
+
+#display {
+  display: block;
+  background-color: #222; /* Dark screen */
+  color: #0f0; /* Green text like old LCDs (or use white) */
+  font-family: 'Courier New', Courier, monospace; /* Digital font look */
+  font-size: 2.5rem;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: right; /* Numbers align right */
+  margin-bottom: 20px;
+  overflow: hidden; /* Prevents numbers from spilling out */
+}
+
+/* 4. Button Styling */
+button {
+  width: 100%;
+  padding: 15px;
+  border: none; /* Removed the grey border for a cleaner look */
+  border-radius: 12px;
+  background-color: #eee; /* Light gray buttons */
+  color: #333;
+  font-size: 1.25rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.1s ease; /* Smooth animation for clicks */
+  box-shadow: 0 4px #ccc; /* Makes buttons look "raised" */
+}
+
+/* 5. Hover Effect (When mouse is over) */
+button:hover {
+  background-color: #e0e0e0;
+  transform: translateY(-2px); /* Moves up slightly */
+}
+
+/* 6. Active Effect (THIS IS WHAT YOU ASKED FOR - BLUE CLICK) */
+button:active {
+  background-color: #007bff; /* Turns Blue */
+  color: white; /* Text turns white */
+  box-shadow: 0 0 #ccc; /* Removes shadow to look "pressed" */
+  transform: translateY(4px); /* Moves down to look pressed */
+}
+
+/* 7. Grid Layouts */
+#numbers {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Shortcut for 1fr 1fr 1fr */
+  gap: 12px; /* Space between buttons */
+}
+
+#symbols {
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+/* 8. Special Button Colors */
+#clear {
+  margin-top: 15px;
+  background-color: #ff6b6b; /* Reddish for clear */
+  color: white;
+  box-shadow: 0 4px #c92a2a;
+}
+
+#clear:hover {
+  background-color: #ff5252;
+}
+
+#clear:active {
+  background-color: #c92a2a;
+  box-shadow: 0 0;
+}
+
+/* Make the Equal button stand out (Optional) */
+#equal {
+  background-color: #4caf50; /* Green */
+  color: white;
+  box-shadow: 0 4px #2e7d32;
+}
+
+#equal:active {
+  background-color: #2e7d32;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digital Clock / Timer</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <a href="/" aria-current="page">Home</a>
+    </nav>
+    <main class="container">
+      <section class="clock">
+        <h1>DIGITAL CLOCK</h1>
+        <div id="timeDisplay"></div>
+        <div id="DateDayDisplay"></div>
+      </section>
+      <section class="timer">
+        <h1>COUNTDOWN TIMER</h1>
+        <div class="form">
+          <label for="minutes">Minutes:</label>
+          <input type="number" id="minutes" min="0" max="59" placeholder="00" />
+          <label for="seconds">Sec:</label>
+          <input type="number" id="seconds" min="0" max="59" placeholder="00" />
+        </div>
+        <div class="timer2">
+          <button id="start">⏱️ Start</button>
+          <div>Display : <span id="displayTimer">00:00</span></div>
+          <button id="pause">⏸️ Pause</button>
+          <button id="reset">↻ Reset</button>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>

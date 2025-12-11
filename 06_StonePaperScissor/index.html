@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <a href="/" aria-current="page">Home</a>
+    </nav>
+    <main class="container">
+      <h1>ROCK - PAPER - SCISSORS</h1>
+      <section class="scoreDisplay">
+        Score: You: <span id="myScore">0</span> | Computer:
+        <span id="compScore">0</span>
+      </section>
+      <section class="game">
+        Choose Your Move :
+        <div class="btns">
+          <button id="rock">👊 Rock</button>
+          <button id="paper">✋ Paper</button>
+          <button id="scissor">✌️ Scissor</button>
+        </div>
+        <div class="resultDisplay"></div>
+        <button id="reset">🔄 Reset Score</button>
+      </section>
+    </main>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>

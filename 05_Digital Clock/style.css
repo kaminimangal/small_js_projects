@@ -1,0 +1,140 @@
+:root {
+  --bg-color: #282c34;
+  --card-bg: #3b404e;
+  --text-main: #ffffff;
+  --accent: #61dafb; /* React Blue */
+  --clock-font: 'Courier New', Courier, monospace;
+}
+
+/* --- NAVIGATION STYLE --- */
+nav {
+  position: absolute; /* This pulls it out of the flex flow */
+  top: 20px;
+  left: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text-main);
+  background-color: var(--card-bg); /* Matches the clock card */
+  padding: 10px 20px;
+  border-radius: 30px; /* Pill shape */
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  border: 1px solid transparent;
+}
+
+nav a:hover {
+  border-color: var(--accent); /* React Blue border */
+  color: var(--accent);
+  box-shadow: 0 0 15px rgba(97, 218, 251, 0.2); /* Subtle glow */
+  transform: translateY(-2px);
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 350px;
+}
+
+section {
+  background-color: var(--card-bg);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+h1 {
+  font-size: 1rem;
+  color: #aaa;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #555;
+  padding-bottom: 10px;
+}
+
+/* --- CLOCK STYLES --- */
+#timeDisplay {
+  font-family: var(--clock-font);
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--accent);
+  text-shadow: 0 0 10px rgba(97, 218, 251, 0.4); /* Glow effect */
+}
+
+#DateDayDisplay {
+  font-size: 1rem;
+  color: #ddd;
+  margin-top: 5px;
+}
+
+/* --- TIMER STYLES --- */
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input {
+  width: 50px;
+  padding: 8px;
+  background: #222;
+  border: 1px solid #555;
+  border-radius: 5px;
+  color: white;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+#displayTimer {
+  display: block;
+  font-family: var(--clock-font);
+  font-size: 2.5rem;
+  margin: 15px 0;
+  color: #ff6b6b; /* Reddish for timer */
+}
+
+button {
+  cursor: pointer;
+  padding: 8px 15px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+#start {
+  background-color: #2ecc71;
+  color: white;
+}
+#pause {
+  background-color: #f1c40f;
+  color: black;
+}
+#reset {
+  background-color: #e74c3c;
+  color: white;
+}
+
+button:active {
+  transform: scale(0.95);
+}

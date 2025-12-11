@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+    <!-- <link rel="stylesheet" href="../style.css" /> -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <!-- <body>
+    <nav>
+      <a href="/" aria-current="page">Home</a>
+    </nav>
+    <main class="container">
+      <h1>TODO LIST</h1>
+      <div class="form">
+        <label for="newTask"> Add new task: </label>
+        <input
+          type="text"
+          id="newTask"
+          name="newTask"
+          placeholder="Enter Task..."
+        />
+        <button id="addTask">➕ Add Task</button>
+      </div>
+      <div class="tasksDisplay">
+        Tasks(<span id="numTasks">3</span>) :
+        <ul id="taskList"></ul>
+      </div>
+      <div class="logic">
+        <p>Completed : <span id="completeTasks"> 1 / 3</span></p>
+        <div class="filters">
+          Filter:
+          <button id="filterAll">All</button>
+          <button id="filterActive">Active</button>
+          <button id="filterDone">Done</button>
+        </div>
+        <div class="filteredTasks"></div>
+      </div>
+    </main>
+    <script type="module" src="script.js"></script>
+  </body> -->
+  <body>
+    <nav>
+      <a href="/" aria-current="page">Home</a>
+    </nav>
+    <main class="container">
+      <h1>TODO LIST</h1>
+      <div class="form">
+        <label for="newTask">Add new task</label>
+        <input
+          type="text"
+          id="newTask"
+          name="newTask"
+          placeholder="Add a new task..."
+          autocomplete="off"
+        />
+        <button id="addTask">➕ Add</button>
+      </div>
+      <div class="tasksDisplay">
+        <span class="tasksDisplay-header"
+          >Tasks (<span id="numTasks">0</span>)</span
+        >
+        <ul id="taskList"></ul>
+      </div>
+      <div class="logic">
+        <div class="stats-row">
+          <p>Completed: <span id="completeTasks">0 / 0</span></p>
+        </div>
+        <div class="filters">
+          <button id="filterAll" class="active-filter">All</button>
+          <button id="filterActive">Active</button>
+          <button id="filterDone">Done</button>
+        </div>
+      </div>
+    </main>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
