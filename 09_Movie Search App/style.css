@@ -1,0 +1,149 @@
+:root {
+    --primary: #e50914; /* Netflix Red */
+    --bg: #141414;
+    --card-bg: #1f1f1f;
+    --text: #ffffff;
+    --text-secondary: #b3b3b3;
+  }
+  
+  * { box-sizing: border-box; }
+  
+  body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+  }
+  
+  /* Main Container */
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    color: var(--primary);
+  }
+  
+  /* Search Section */
+  .searchSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    background: var(--card-bg);
+    padding: 15px;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+  }
+  
+  .searchSection h3 { margin: 0; padding-right: 10px; }
+  
+  input {
+    padding: 12px 20px;
+    width: 300px;
+    border-radius: 25px;
+    border: none;
+    background: #333;
+    color: white;
+    font-size: 1rem;
+    outline: none;
+  }
+  input:focus { background: #444; }
+  
+  button#search {
+    padding: 12px 20px;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 50%; /* Circle button */
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: 0.2s;
+  }
+  button#search:hover { transform: scale(1.1); }
+  
+  /* Filter Section */
+  .filterSection {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .filterSection button {
+    background: transparent;
+    border: 1px solid #555;
+    color: var(--text-secondary);
+    padding: 8px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .filterSection button:hover {
+    border-color: white;
+    color: white;
+    background: rgba(255,255,255,0.1);
+  }
+  
+  /* Results Text */
+  .resultSection {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+  }
+  
+  #found { color: var(--primary); font-weight: bold; }
+  
+  /* MOVIE GRID (The most important part) */
+  .movieSection {
+    display: grid;
+    /* Auto-fill columns: min 200px wide */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 30px;
+  }
+  
+  /* Individual Movie Card (JS will create this) */
+  .movie-card {
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .movie-card:hover { transform: translateY(-10px); }
+  
+  .movie-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
+  
+  .movie-info { padding: 15px; text-align: left; }
+  .movie-info h3 { margin: 0 0 5px 0; font-size: 1rem; color: white; }
+  .movie-info p { margin: 0; font-size: 0.9rem; color: #888; }
+
+  .pagination button {
+    background-color: #333;
+    border: 1px solid #555;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+  }
+  .pagination button:hover { background-color: var(--primary); border-color: var(--primary); }
+  .pagination button:disabled { opacity: 0.5; cursor: not-allowed; }
+  .pagination span { font-size: 1.2rem; align-self: center; }

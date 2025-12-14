@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Search App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <a href="/" aria-current="page">Home</a>
+    </nav>
+    <main class="container">
+      <h1>MOVIE SEARCH APP</h1>
+      <section class="movieBoard">
+        <div class="searchSection">
+          <h3>Search :</h3>
+          <input type="text" placeholder="Movie title..." id="inputMovie" />
+          <button id="search">🔍</button>
+        </div>
+        <div class="filterSection">
+          <button id="action">Action</button><button id="comedy">Comedy</button
+          ><button id="sci-fi">Sci-Fi</button>
+        </div>
+        <div class="resultSection">Results : <span id="results"></span></div>
+        <div class="movieSection"></div>
+        <div class="pagination" id="pagination-controls" style="display: none; margin-top: 20px; gap: 10px; justify-content: center;">
+          <button id="prevBtn">❮ Previous</button>
+          <span id="pageCount">Page 1</span>
+          <button id="nextBtn">Next ❯</button>
+      </div>
+      </section>
+    </main>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
