@@ -6,7 +6,7 @@ const scifiBtn = document.getElementById("sci-fi");
 const numFound = document.getElementById("found");
 const movieBoard = document.querySelector(".movieSection");
 const results = document.getElementById("results");
-const apiKey = ""; // Just the short code
+const apiKey = import.meta.env.VITE_API_KEY; // ✅ Correct way// Just the short code
 const baseUrl = "https://www.omdbapi.com/"; // The place we send the request
 let currPage = 0;
 const searchMovies = () => {

@@ -147,3 +147,28 @@
   .pagination button:hover { background-color: var(--primary); border-color: var(--primary); }
   .pagination button:disabled { opacity: 0.5; cursor: not-allowed; }
   .pagination span { font-size: 1.2rem; align-self: center; }
+
+  /* --- NAVIGATION --- */
+nav {
+  position: absolute; /* Takes it out of the flow */
+  top: 20px;
+  left: 20px;
+  z-index: 100; /* Ensures it sits on top of everything */
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text-secondary); /* Uses your grey variable */
+  border: 1px solid #333;
+  padding: 8px 20px;
+  border-radius: 30px; /* Pill shape */
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  background: rgba(0, 0, 0, 0.5); /* Slight dark background */
+}
+
+nav a:hover {
+  color: white;
+  border-color: var(--primary); /* Turns Red on hover */
+  transform: translateY(-2px); /* Little pop up effect */
+}
